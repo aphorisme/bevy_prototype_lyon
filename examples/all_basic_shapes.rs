@@ -9,7 +9,7 @@ fn main() {
 }
 
 fn setup(
-    mut commands: Commands,
+    commands: &mut Commands,
     mut materials: ResMut<Assets<ColorMaterial>>,
     mut meshes: ResMut<Assets<Mesh>>,
 ) {
@@ -19,10 +19,10 @@ fn setup(
     let blue = materials.add(Color::rgb(0.1, 0.4, 0.5).into());
 
     // Now, let's create the shapes and put them into the ECS world. Here we use the
-    // `basic_shapes::primitive` function, that returns a `SpriteComponents`, which
+    // `basic_shapes::primitive` function, that returns a `SpriteBundles`, which
     // is very good even for drawing any kind of flat mesh.
     commands
-        .spawn(Camera2dComponents::default())
+        .spawn(Camera2dBundle::default())
         // Fill Circle
         .spawn(primitive(
             red.clone(),

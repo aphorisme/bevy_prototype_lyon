@@ -4,7 +4,7 @@
 
 ## How does it work?
 
-Currently Bevy does not support drawing custom shapes in an easy way. This crate uses Bevy's [`SpriteComponents`](https://docs.rs/bevy/0.1.3/bevy/prelude/struct.SpriteComponents.html) bundle and replaces its default quad mesh with a custom mesh.
+Currently Bevy does not support drawing custom shapes in an easy way. This crate uses Bevy's [`SpriteBundles`](https://docs.rs/bevy/0.1.3/bevy/prelude/struct.SpriteBundles.html) bundle and replaces its default quad mesh with a custom mesh.
 
 Here the [**lyon**](https://docs.rs/lyon/0.16.0/lyon/) crate is used to generate that custom mesh.
 
